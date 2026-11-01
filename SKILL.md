@@ -50,7 +50,7 @@ python scripts/ingest.py "用户给的整段分享文本或短链"
 安装：
 
 ```bash
-pip install playwright imageio-ffmpeg requests -i https://mirrors.aliyun.com/pypi/simple/
+pip install playwright imageio-ffmpeg requests
 python -m playwright install chromium
 ```
 

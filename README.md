@@ -19,7 +19,7 @@
 
 ```bash
 # 1. 装依赖
-pip install playwright imageio-ffmpeg requests -i https://mirrors.aliyun.com/pypi/simple/
+pip install playwright imageio-ffmpeg requests
 python -m playwright install chromium
 
 # 2. 下载一个抖音视频（贴手机分享的整段文本即可）

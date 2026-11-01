@@ -20,7 +20,7 @@ video-ingest —— 跨平台视频采集工作流
     不依赖 Cookie，也不需要手算 a_bogus 签名。
 
 用法：
-    python ingest.py "https://v.douyin.com/rWWTQLkjyiw/"
+    python ingest.py "https://v.douyin.com/xxxxxxxx/"
     python ingest.py "整段手机分享文本（含口令尾巴）"
 
 可选：
