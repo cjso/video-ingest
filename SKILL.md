@@ -47,12 +47,26 @@ python scripts/ingest.py "用户给的整段分享文本或短链"
 - `imageio-ffmpeg`（完整版 ffmpeg，合并音视频）
 - `requests`（HTTP 下载与短链解析）
 
-安装：
+## 安装引导（供 AI 执行，必读）
 
-```bash
-pip install playwright imageio-ffmpeg requests
-python -m playwright install chromium
-```
+执行安装前，**先询问用户工具安装位置**，不要闷头默认装：
+
+> 需要安装以下依赖：`playwright`（含 chromium 内核）、`imageio-ffmpeg`、`requests`。
+> 你希望装到默认位置，还是指定路径？
+
+- **用户选「默认」**：直接执行
+  ```bash
+  pip install playwright imageio-ffmpeg requests
+  python -m playwright install chromium
+  ```
+- **用户选「指定路径」**：按用户给的目录安装，浏览器内核用环境变量指定落点，例如：
+  ```bash
+  pip install playwright imageio-ffmpeg requests --target <用户指定目录>
+  PLAYWRIGHT_BROWSERS_PATH=<用户指定目录> python -m playwright install chromium
+  ```
+  并把 `PLAYWRIGHT_BROWSERS_PATH` 持久化到该用户的 shell 配置，确保后续运行能找到内核。
+
+安装完成后，跑一次冒烟验证（下载一个测试视频）再交付。
 
 ## 技术要点（排错必读）
 
